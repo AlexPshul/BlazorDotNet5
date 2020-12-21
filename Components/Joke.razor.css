@@ -1,0 +1,8 @@
+.root {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.root .joke {
+  margin-top: 20px;
+}
