@@ -1,0 +1,28 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 75px;
+  background-color: lightskyblue;
+  text-align: center;
+}
+
+.header .header-text {
+  color: white;
+  font-size: 48px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.body {
+  width: 70%;
+  margin: auto;
+}

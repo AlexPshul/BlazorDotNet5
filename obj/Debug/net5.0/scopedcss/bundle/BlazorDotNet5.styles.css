@@ -1,0 +1,30 @@
+/* /Components/HelloComponent.razor.rz.scp.css */
+/* /Shared/MainLayout.razor.rz.scp.css */
+.root[b-i4o381lxyf] {
+  display: flex;
+  flex-direction: column;
+}
+
+.header[b-i4o381lxyf] {
+  height: 75px;
+  background-color: lightskyblue;
+  text-align: center;
+}
+
+.header .header-text[b-i4o381lxyf] {
+  color: white;
+  font-size: 48px;
+}
+
+.nav[b-i4o381lxyf] {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.body[b-i4o381lxyf] {
+  width: 70%;
+  margin: auto;
+}
