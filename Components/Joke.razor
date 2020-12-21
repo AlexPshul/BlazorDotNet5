@@ -1,8 +1,9 @@
 @inject HttpClient Http
+@using BlazorStrap;
 
 <div class="root">
   <h1>Get Joke!</h1>
-  <button @onclick="FetchJoke">Get Joke</button>
+  <BSButton Color="Color.Primary" @onclick="FetchJoke">Get Joke</BSButton>
   <h3 class="joke">@_joke</h3>
 </div>
 
