@@ -4,15 +4,14 @@
   <InputFile OnChange="@HandleCsv" accept=".csv"/>
 
   <table>
-    @foreach (var row in _rows)
-    {
+    <Virtualize Items="_rows" Context="row">
         <tr>
           @foreach (var cell in row.Split(','))
           {
             <td>@cell</td>
           }
         </tr>
-    }
+      </Virtualize>
   </table>
 
 </div>
