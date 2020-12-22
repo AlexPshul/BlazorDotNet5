@@ -1,5 +1,31 @@
 @page "/csv";
 
 <div>
-  FILE!
+  <InputFile OnChange="@HandleCsv" accept=".csv"/>
+
+  <table>
+    @foreach (var row in _rows)
+    {
+        <tr>
+          @foreach (var cell in row.Split(','))
+          {
+            <td>@cell</td>
+          }
+        </tr>
+    }
+  </table>
+
 </div>
+
+@code {
+  private string[] _rows = new string[0];
+
+  private async Task HandleCsv(InputFileChangeEventArgs eventArgs)
+  {
+    using var readingStream = eventArgs.File.OpenReadStream();
+    using var contentStream = new StreamContent(readingStream);
+
+    string content = await contentStream.ReadAsStringAsync();
+    _rows = content.Split('\r');
+  }
+}
